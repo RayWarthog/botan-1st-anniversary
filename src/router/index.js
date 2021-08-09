@@ -16,6 +16,11 @@ const routes = [
     path: '/animation',
     name: 'Animation',
     component: () => import('@/views/Animation.vue')
+  },
+  {
+    path: '/messages',
+    name: 'Messages',
+    component: () => import('@/views/Messages.vue')
   }
 ]
 

@@ -1,10 +1,9 @@
 <template>
-  <Page id="menu" title_src="menu.png" back_link="/" back_btn_type="1">
+  <Page id="menu" title_src="menu.png" title_alt="Menu" back_link="/" back_btn_type="1">
     <div id="links">
       <router-link to="/animation">animation</router-link>
       <router-link to="/messages">messages</router-link>
-      <router-link to="/fanarts">fanarts</router-link>
-      <a href="#ssrb-picrew" target="_blank">ssrb picrew</a>
+      <a href="https://picrew.me/secret_image_maker/pGwu64Vbgybd9W0T" target="_blank">ssrb picrew</a>
       <router-link to="/credits">credits</router-link>
     </div>
     <img id="botan-animation" src="~@/assets/images/gif/botan_pet.gif" alt="">

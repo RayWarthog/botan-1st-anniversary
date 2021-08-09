@@ -2,11 +2,11 @@
   <Page id="home">
     <div id="subpage-container">
       <div id="title-container">
-        <img id="title" src="~@/assets/images/logo.png" alt="">
+        <img id="title" src="~@/assets/images/logo.png" alt="Shishiro Botan 1st Anniversary">
       </div>
       <div id="content-container">
         <router-link to="/menu">
-          <div id="coin"></div>
+          <div id="coin" title="say poi"></div>
         </router-link>
       </div>
     </div>

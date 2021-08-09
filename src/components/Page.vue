@@ -2,10 +2,12 @@
   <div class="page-container" v-bind:class="{
     sky_bg: sky_bg ? true : false
   }">
-    <div class="top-bar">
+    <div class="top-bar" v-bind:class="{
+        large_title: large_title ? true : false
+      }">
       <div class="title-container">
         <template v-if="title_src">
-          <img class="title" :src="require('@/assets/images/' + title_src)" alt="">
+          <img class="title" :src="require('@/assets/images/' + title_src)" :alt="title_alt">
         </template>
       </div>
       <div class="back-btn" v-if="back_link && back_btn_type">
@@ -25,8 +27,11 @@ export default {
   name: 'Page',
   props: {
     title_src: String,
+    title_alt: String,
     back_link: String,
-    back_btn_type: String
+    back_btn_type: String,
+    sky_bg: Boolean,
+    large_title: Boolean
   }
 }
 </script>
@@ -37,10 +42,12 @@ export default {
   object-fit: scale-down;
   padding-bottom: 5px;
   margin-top: 5px;
+  pointer-events: none;
 }
 
 .content-container {
   flex: 1;
+  width: 100%;
 }
 
 div.page-container {
@@ -115,6 +122,10 @@ div.page-container.sky_bg {
 @media (min-width: 481px) {
   .top-bar {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .top-bar.large_title {
+    grid-template-columns: 1fr 2fr 1fr;
   }
 
   .title-container {
