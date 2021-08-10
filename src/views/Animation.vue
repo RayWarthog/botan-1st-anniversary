@@ -5,6 +5,7 @@
         <iframe src="https://www.youtube-nocookie.com/embed/Lw5jyYU4WuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
+    <div id="box-shadow"></div>
     <img id="botan-animation" src="~@/assets/images/gif/animation.gif" alt="">
   </Page>
 </template>
@@ -52,10 +53,24 @@ export default {
   bottom: 2%;
 }
 
+#box-shadow {
+  content: " ";
+  width: 100%;
+  position: fixed;
+  bottom: 14%;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 32px 6px #000000;
+}
+
 @media (orientation: landscape) {
   .wrapper {
     margin-left: 2vw;
     max-width: 60%;
+  }
+
+  #box-shadow {
+    margin-left: 2vw;
+    width: 60%;
   }
 }
 
@@ -63,10 +78,18 @@ export default {
   .wrapper {
     max-width: 60%;
   }
+
+  #box-shadow {
+    width: 60%;
+  }
 }
 
 @media (min-width: 1920px) {
   .wrapper {
+    max-width: 1280px;
+  }
+
+  #box-shadow {
     max-width: 1280px;
   }
 }
