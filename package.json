@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "csv-loader": "^3.0.3",
+    "flag-icon-css": "^3.5.0",
+    "i18n-iso-countries": "^6.8.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },

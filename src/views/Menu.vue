@@ -23,7 +23,8 @@ export default {
 <style scoped>
 #menu {
   font-family: 'Litebulb 8-bit';
-  font-size: 2.75rem;
+  font-size: 2rem;
+  line-height: 1.5;
   color: #5EBC34;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
@@ -52,7 +53,7 @@ export default {
 }
 
 #links {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   position: relative;
   z-index: 5;
@@ -87,7 +88,7 @@ export default {
 
 @media (min-width: 1024px) {
   #menu {
-    font-size: 6.5rem;
+    font-size: 4rem;
   }
   #botan-animation {
     max-width: 320px;
