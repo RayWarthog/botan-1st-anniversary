@@ -27,7 +27,11 @@
               </div>
               <div class="media" v-if="message.fanarts">
                 <div class="media-inner-wrapper">
-                  <img :src="message.fanarts_small" alt="" loading="lazy">
+                  <a class="message-image" :href="message.fanarts" :author="message.nickname" :message="message.message" :message_jp="message.message_jp" :country_code="message.country_code" :country_name="message.country_name" :original_credit="message.original_credit">
+                    <img loading="lazy"
+                    :src="message.fanarts_small"
+                    alt="">
+                  </a>
                   <div v-if="message.original_credit">{{ message.original_credit }}</div>
                 </div>
                 <!-- {{ message.fanarts }} -->
@@ -54,10 +58,8 @@ export default {
 </script>
 
 <style scoped>
-
 .message {
-  width: 100%;
-  margin-bottom: 15px;
+  position: relative;
 }
 
 .white-box {
@@ -71,19 +73,19 @@ export default {
 }
 
 .white-box-1 {
-  left: 3%;
+  left: 5%;
 }
 
 .white-box-2 {
-  left: 12%;
+  left: 14%;
 }
 
 .white-box-3 {
-  left: 17%;
+  left: 19%;
 }
 
 .white-box-4 {
-  left: 22%;
+  left: 24%;
 }
 
 .outer-wrapper-2 {
@@ -144,6 +146,8 @@ export default {
 .name {
   margin-left: 15px;
   font-size: 2rem;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .media {
@@ -151,7 +155,14 @@ export default {
   justify-content: center;
 }
 
-@media (min-width: 769px) {
+.media img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (min-width:801px)  {
   .outer-wrapper-2 {
     padding: 20px;
   }
@@ -161,14 +172,13 @@ export default {
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width:1281px) {
   .outer-wrapper-2 {
-    padding: 40px;
+    padding: 30px;
   }
 
   .outer-wrapper-1 {
     padding: 15px;
   }
 }
-
 </style>
