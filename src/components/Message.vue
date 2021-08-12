@@ -7,7 +7,7 @@
           <div class="message-container">
             <div class="sender">
               <div class="avatar">
-                <img :src="message.pfp" alt="">
+                <img :src="message.pfp" alt="Avatar">
                 <span class="flag-icon" v-if="message.country_code" v-bind:class="'flag-icon-' + message.country_code" :title="message.country_name" :alt="message.country_name"></span>
               </div>
               <div class="name">
@@ -30,7 +30,7 @@
                   <a class="message-image" :href="message.fanarts" :author="message.nickname" :message="message.message" :message_jp="message.message_jp" :country_code="message.country_code" :country_name="message.country_name" :original_credit="message.original_credit">
                     <img loading="lazy"
                     :src="message.fanarts_small"
-                    alt="">
+                    alt="Fanart">
                   </a>
                   <div v-if="message.original_credit">{{ message.original_credit }}</div>
                 </div>

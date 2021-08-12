@@ -10,7 +10,7 @@
         </router-link>
       </div>
     </div>
-    <img id="botan-animation" src="~@/assets/images/gif/ciclo-completo.gif" alt="">
+    <img id="botan-animation" src="~@/assets/images/gif/ciclo-completo.gif" alt="Botan Walking">
   </Page>
 </template>
 

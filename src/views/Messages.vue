@@ -159,6 +159,10 @@ export default {
   margin-bottom: 1rem;
 }
 
+.mfp-wrap {
+  overflow: auto;
+}
+
 @media (min-width:801px)  {
   .message {
     width: calc(50% - 2rem);

@@ -6,7 +6,7 @@
       </div>
     </div>
     <div id="box-shadow"></div>
-    <img id="botan-animation" src="~@/assets/images/gif/animation.gif" alt="">
+    <img id="botan-animation" src="~@/assets/images/gif/animation.gif" alt="Botan Eating">
   </Page>
 </template>
 

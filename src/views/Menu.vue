@@ -6,7 +6,7 @@
       <a href="https://picrew.me/image_maker/1217551" target="_blank">ssrb picrew</a>
       <router-link to="/credits">credits</router-link>
     </div>
-    <img id="botan-animation" src="~@/assets/images/gif/botan_pet.gif" alt="">
+    <img id="botan-animation" src="~@/assets/images/gif/botan_pet.gif" alt="Botan Pat">
   </Page>
 </template>
 
