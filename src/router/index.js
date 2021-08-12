@@ -21,6 +21,11 @@ const routes = [
     path: '/messages',
     name: 'Messages',
     component: () => import('@/views/Messages.vue')
+  },
+  {
+    path: '/credits',
+    name: 'Credits',
+    component: () => import('@/views/Credits.vue')
   }
 ]
 
