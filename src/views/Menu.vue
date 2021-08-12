@@ -3,7 +3,7 @@
     <div id="links">
       <router-link to="/animation">animation</router-link>
       <router-link to="/messages">messages</router-link>
-      <a href="https://picrew.me/secret_image_maker/pGwu64Vbgybd9W0T" target="_blank">ssrb picrew</a>
+      <a href="https://picrew.me/image_maker/1217551" target="_blank">ssrb picrew</a>
       <router-link to="/credits">credits</router-link>
     </div>
     <img id="botan-animation" src="~@/assets/images/gif/botan_pet.gif" alt="">

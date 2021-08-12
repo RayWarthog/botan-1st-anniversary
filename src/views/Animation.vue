@@ -2,7 +2,7 @@
   <Page id="animation" back_link="/menu" back_btn_type="3">
     <div class="wrapper">
       <div id="video-container">
-        <iframe src="https://www.youtube-nocookie.com/embed/Lw5jyYU4WuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/5_AkrDSMs2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
     <div id="box-shadow"></div>
