@@ -1,10 +1,18 @@
 <template>
-  <Page id="menu" title_src="menu.png" title_alt="Menu" back_link="/" back_btn_type="1">
+  <Page id="menu" title_src="menu.png" title_alt="Menu" title_alt_jp="メニュー" back_link="/" back_btn_type="1">
     <div id="links">
-      <router-link to="/animation">animation</router-link>
-      <router-link to="/messages">messages</router-link>
-      <a href="https://picrew.me/image_maker/1217551" target="_blank">ssrb picrew</a>
-      <router-link to="/credits">credits</router-link>
+      <router-link to="/animation">
+        {{state.lang == 'ja' ? 'アニメーション' : 'animation'}}
+      </router-link>
+      <router-link to="/messages">
+        {{state.lang == 'ja' ? 'メッセージ' : 'messages'}}
+      </router-link>
+      <a href="https://picrew.me/image_maker/1217551" target="_blank">
+        {{state.lang == 'ja' ? 'SSRB着せ替え' : 'ssrb picrew'}}
+      </a>
+      <router-link to="/credits">
+        {{state.lang == 'ja' ? 'クレジット' : 'credits'}}
+      </router-link>
     </div>
     <img id="botan-animation" src="~@/assets/images/gif/botan_pet.gif" alt="Botan Pat">
   </Page>
@@ -12,17 +20,23 @@
 
 <script>
 import Page from '@/components/Page.vue'
+import store from '@/store'
 
 export default {
   components: {
     Page
+  },
+  data: () => {
+    return {
+      state: store.state
+    }
   }
 }
 </script>
 
 <style scoped>
 #menu {
-  font-family: 'Litebulb 8-bit';
+  font-family: 'Litebulb 8-bit', 'Noto Sans TC', cursive;
   font-size: 2rem;
   line-height: 1.5;
   color: #5EBC34;

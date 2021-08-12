@@ -1,8 +1,10 @@
 <template>
-  <Page id="Credits" title_src="credits.png" title_alt="Credits" back_link="/menu" back_btn_type="2">
+  <Page id="Credits" title_src="credits.png" title_alt="Credits" title_alt_jp="クレジット" back_link="/menu" back_btn_type="4">
     <div id="credits-container">
       <div class="credit-section">
-        <div class="credit-title">Project Organizer / Supervisors</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? 'プロジェクト主催 / 管理' : 'Project Organizer / Supervisors'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>Rachel Banana</li>
@@ -14,7 +16,9 @@
         </div>
       </div>
       <div class="credit-section">
-        <div class="credit-title">Website</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? 'ウェブサイト / 管理' : 'Website'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>Warthog</li>
@@ -25,7 +29,9 @@
         </div>
       </div>
       <div class="credit-section">
-        <div class="credit-title">Animation and Video Edition</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? 'アニメション・動画編集' : 'Animation and Video Edition'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>Mishima</li>
@@ -33,7 +39,9 @@
         </div>
       </div>
       <div class="credit-section">
-        <div class="credit-title">Animation Art</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? 'アニメーションのイラスト' : 'Animation Art'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>Forever9Nine</li>
@@ -46,7 +54,9 @@
         </div>
       </div>
       <div class="credit-section">
-        <div class="credit-title">Picrew Art</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? '着せ替えアート' : 'Picrew Art'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>Forever9Nine</li>
@@ -56,7 +66,9 @@
         </div>
       </div>
       <div class="credit-section">
-        <div class="credit-title">Translators</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? '翻訳' : 'Translators'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>木狐</li>
@@ -70,7 +82,9 @@
         </div>
       </div>
       <div class="credit-section">
-        <div class="credit-title">Others</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? '他' : 'Others'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>Misamisatoto</li>
@@ -86,7 +100,9 @@
         </div>
       </div>
       <div class="credit-section">
-        <div class="credit-title">Music & SFX</div>
+        <div class="credit-title">
+          {{state.lang == 'ja' ? '音楽・効果音' : 'Music & SFX'}}
+        </div>
         <div class="credit-content">
           <ul>
             <li>DOVA-SYNDROME</li>
@@ -102,8 +118,7 @@
     <div id="botan-animation-container">
       <div id="text-bubble">
         <p>
-          Special Thanks
-          To everyone who supports this project
+          {{state.lang == 'ja' ? '特別な感謝 このプロジェックとをサポートしてくれた皆さんへ' : 'Special Thanks to everyone who supports this project'}}
         </p>
       </div>
       <img id="botan-animation" src="~@/assets/images/gif/botan_eat.gif" alt="Botan eating">
@@ -113,10 +128,16 @@
 
 <script>
 import Page from '@/components/Page.vue'
+import store from '@/store'
 
 export default {
   components: {
     Page
+  },
+  data: () => {
+    return {
+      state: store.state
+    }
   }
 }
 </script>

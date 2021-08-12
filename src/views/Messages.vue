@@ -1,5 +1,5 @@
 <template>
-  <Page id="messages" title_src="gif/messages.gif" title_alt="Messages" back_link="/menu" back_btn_type="4" sky_bg large_title>
+  <Page id="messages" title_src="messages.gif" title_alt="Messages" title_alt_jp="メッセージ" back_link="/menu" back_btn_type="2" sky_bg large_title>
     <div id="messages-container">
       <template v-for="message in messages" :key="message.idx">
         <Message :message="message"/>

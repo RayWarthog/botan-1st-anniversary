@@ -6,7 +6,7 @@
       </div>
       <div id="content-container">
         <router-link to="/menu">
-          <div id="coin" title="say poi"></div>
+          <div id="coin" :title="(state.lang == 'ja') ? 'ぽい' : 'say poi'" :lang="state.lang"></div>
         </router-link>
       </div>
     </div>
@@ -16,10 +16,16 @@
 
 <script>
 import Page from '@/components/Page.vue'
+import store from '@/store'
 
 export default {
   components: {
     Page
+  },
+  data: function () {
+    return {
+      state: store.state
+    }
   }
 }
 </script>
@@ -69,13 +75,21 @@ export default {
 }
 
 #coin {
-  background-image: url("~@/assets/images/home_coin.png");
+  background-image: url("~@/assets/images/en/coin.png");
   width: 127px;
   height: 127px;
 }
 
+#coin:lang(ja) {
+  background-image: url("~@/assets/images/ja/coin.png");
+}
+
 #coin:hover, #coin:active {
-  background-image: url("~@/assets/images/gif/coin.gif");
+  background-image: url("~@/assets/images/en/coin.gif");
+}
+
+#coin:lang(ja):hover, #coin:lang(ja):active {
+  background-image: url("~@/assets/images/ja/coin.gif");
 }
 
 @media (orientation: portrait) and (min-width: 768px) {

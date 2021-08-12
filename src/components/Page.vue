@@ -7,12 +7,12 @@
       }">
       <div class="title-container">
         <template v-if="title_src">
-          <img class="title" :src="require('@/assets/images/' + title_src)" :alt="title_alt">
+          <img class="title" :src="require('@/assets/images/' + state.lang + '/' + title_src)" :alt="(state.lang == 'ja') ? title_alt_jp : title_alt">
         </template>
       </div>
       <div class="back-btn" v-if="back_link && back_btn_type">
         <router-link :to=back_link>
-          <div class="back-btn-img" :class="'back-btn-' + back_btn_type"></div>
+          <div class="back-btn-img" :class="'back-btn-' + back_btn_type" :lang="state.lang"></div>
         </router-link>
       </div>
     </div>
@@ -23,15 +23,23 @@
 </template>
 
 <script>
+import store from '@/store'
+
 export default {
   name: 'Page',
   props: {
     title_src: String,
     title_alt: String,
+    title_alt_jp: String,
     back_link: String,
     back_btn_type: String,
     sky_bg: Boolean,
     large_title: Boolean
+  },
+  data: function () {
+    return {
+      state: store.state
+    }
   }
 }
 </script>
@@ -43,6 +51,10 @@ export default {
   padding-bottom: 5px;
   margin-top: 5px;
   pointer-events: none;
+}
+
+.title-container {
+  padding-top: 1.25rem;
 }
 
 .content-container {
@@ -92,31 +104,59 @@ div.page-container.sky_bg {
 }
 
 .back-btn-img.back-btn-1 {
-  background-image: url('~@/assets/images/back/back1.png');
+  background-image: url('~@/assets/images/en/back/back1.png');
 }
 .back-btn-img.back-btn-1:hover, .back-btn-img.back-btn-1:active {
-  background-image: url("~@/assets/images/back/back1.gif");
+  background-image: url("~@/assets/images/en/back/back1.gif");
+}
+
+.back-btn-img.back-btn-1:lang(ja) {
+  background-image: url('~@/assets/images/ja/back/back1.png');
+}
+.back-btn-img.back-btn-1:hover:lang(ja), .back-btn-img.back-btn-1:active:lang(ja) {
+  background-image: url("~@/assets/images/ja/back/back1.gif");
 }
 
 .back-btn-img.back-btn-2 {
-  background-image: url('~@/assets/images/back/back2.png');
+  background-image: url('~@/assets/images/en/back/back2.png');
 }
 .back-btn-img.back-btn-2:hover, .back-btn-img.back-btn-2:active {
-  background-image: url("~@/assets/images/back/back2.gif");
+  background-image: url("~@/assets/images/en/back/back2.gif");
+}
+
+.back-btn-img.back-btn-2:lang(ja) {
+  background-image: url('~@/assets/images/ja/back/back2.png');
+}
+.back-btn-img.back-btn-2:hover:lang(ja), .back-btn-img.back-btn-2:active:lang(ja) {
+  background-image: url("~@/assets/images/ja/back/back2.gif");
 }
 
 .back-btn-img.back-btn-3 {
-  background-image: url('~@/assets/images/back/back3.png');
+  background-image: url('~@/assets/images/en/back/back3.png');
 }
 .back-btn-img.back-btn-3:hover, .back-btn-img.back-btn-3:active {
-  background-image: url("~@/assets/images/back/back3.gif");
+  background-image: url("~@/assets/images/en/back/back3.gif");
+}
+
+.back-btn-img.back-btn-3:lang(ja) {
+  background-image: url('~@/assets/images/ja/back/back3.png');
+}
+.back-btn-img.back-btn-3:hover:lang(ja), .back-btn-img.back-btn-3:active:lang(ja) {
+  background-image: url("~@/assets/images/ja/back/back3.gif");
 }
 
 .back-btn-img.back-btn-4 {
-  background-image: url('~@/assets/images/back/back4.png');
+  background-image: url('~@/assets/images/en/back/back4.png');
 }
 .back-btn-img.back-btn-4:hover, .back-btn-img.back-btn-4:active {
-  background-image: url("~@/assets/images/back/back4.gif");
+  background-image: url("~@/assets/images/en/back/back4.gif");
+}
+
+.back-btn-img.back-btn-4:lang(ja) {
+  background-image: url('~@/assets/images/ja/back/back4.png');
+}
+.back-btn-img.back-btn-4:hover:lang(ja), .back-btn-img.back-btn-4:active:lang(ja) {
+  background-image: url("~@/assets/images/ja/back/back4.gif");
 }
 
 @media (min-width: 481px) {
@@ -130,6 +170,7 @@ div.page-container.sky_bg {
 
   .title-container {
     grid-column-start: 2;
+    padding-top: inherit;
   }
 }
 </style>
