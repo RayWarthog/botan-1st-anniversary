@@ -1,5 +1,5 @@
 <template>
-  <Page id="Credits" title_src="credits.png" title_alt="Credits" title_alt_jp="クレジット" back_link="/menu" back_btn_type="4">
+  <Page id="Credits" title_src="credits.png" title_alt="Credits" title_alt_jp="クレジット" back_link="/menu" back_btn_type="4" sky_bg>
     <div id="credits-container">
       <div class="credit-section">
         <div class="credit-title">
@@ -113,7 +113,6 @@
           </ul>
         </div>
       </div>
-      <div class="spacer"></div>
     </div>
     <div id="botan-animation-container">
       <div id="text-bubble">
@@ -123,6 +122,7 @@
       </div>
       <img id="botan-animation" src="~@/assets/images/gif/botan_eat.gif" alt="Botan eating">
     </div>
+    <img id="ground" src="~@/assets/images/ground.png" alt="ground">
   </Page>
 </template>
 
@@ -145,12 +145,12 @@ export default {
 <style>
 #credits-container {
   position: relative;
-  z-index: 5;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  padding-bottom: 30vh;
 }
 
 .credit-section {
@@ -182,17 +182,13 @@ export default {
   padding-left: 0;
 }
 
-.spacer {
-  height: 150px;
-  width: 300px;
-}
-
 #botan-animation-container {
   position: absolute;
   right: 0;
   bottom: 2%;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 #text-bubble {
@@ -226,7 +222,16 @@ export default {
   object-fit: scale-down;
   object-position: bottom;
   margin-left: auto;
-  z-index: 1;
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  object-fit: fill;
+  object-position: bottom;
+  z-index: 5;
+  max-height: 30vh;
 }
 
 @media (orientation: portrait) and (min-width: 768px) {
@@ -248,10 +253,6 @@ export default {
   .credit-section {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-  }
-  .spacer {
-    height: 0;
-    width: 0;
   }
 }
 </style>
