@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 #menu {
-  font-family: 'Litebulb 8-bit', 'Noto Sans TC', cursive;
+  font-family: 'Litebulb 8-bit', 'Dela Gothic One', cursive;
   font-size: 2rem;
   line-height: 1.5;
   color: #5EBC34;

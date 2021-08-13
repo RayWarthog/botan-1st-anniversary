@@ -104,7 +104,7 @@ export default {
 .message-container {
   padding: 15px;
   background-color: #76C04E;
-  font-family: 'Litebulb 8-bit', 'Noto Sans TC', 'Dela Gothic One', 'Press Start 2P', cursive;
+  font-family: 'Litebulb 8-bit', 'Dela Gothic One', 'Noto Sans TC', 'Press Start 2P', cursive;
   border-style: solid;
   border-color: #201E1E;
   border-width: 10px;

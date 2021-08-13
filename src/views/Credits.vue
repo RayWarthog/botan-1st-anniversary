@@ -78,6 +78,7 @@
             <li>mugichos</li>
             <li>Faldi-Tan</li>
             <li>Vanilla</li>
+            <li>kurapan</li>
           </ul>
         </div>
       </div>
@@ -162,7 +163,7 @@ export default {
 }
 
 .credit-section {
-  font-family: 'Litebulb 8-bit', 'Noto Sans TC', cursive;
+  font-family: 'Litebulb 8-bit', 'Dela Gothic One', cursive;
   color: #5EBC34;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-size: 1.5rem;
@@ -202,7 +203,7 @@ export default {
 #text-bubble {
   background-color: white;
   width: 150px;
-  font-family: 'Litebulb 8-bit', 'Noto Sans TC', cursive;
+  font-family: 'Litebulb 8-bit', 'Dela Gothic One', cursive;
   position: relative;
   padding: 1px;
   text-align: center;
@@ -245,7 +246,7 @@ export default {
 .disclaimer {
   padding: 5px;
   padding-bottom: 30vh;
-  font-family: 'Litebulb 8-bit', 'Noto Sans TC', cursive;
+  font-family: 'Litebulb 8-bit', 'Dela Gothic One', cursive;
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
