@@ -2,7 +2,7 @@
   <button id="lang-toggle" @click="toggleLang()">
     <div id="lang-toggle-ja" class="lang-option" v-bind:class="{
       selected: state.lang === 'ja'
-    }">JA</div>
+    }">JP</div>
     <div class="lang-option" v-bind:class="{
       selected: state.lang === 'en'
     }">EN</div>
