@@ -114,6 +114,15 @@
         </div>
       </div>
     </div>
+    <div class="disclaimer">
+      <p v-if="state.lang == 'ja'">
+        当ウェブサイトはホロライブのファンによって運営されている非公式ファンサイトです。
+        カバー株式会社およびホロライブプロダクションとは一切関係ありません。
+      </p>
+      <p v-else>
+        This is strictly a fan site. We are not related to Cover Corp. nor Hololive in any way.
+      </p>
+    </div>
     <div id="botan-animation-container">
       <div id="text-bubble">
         <p>
@@ -150,7 +159,6 @@ export default {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  padding-bottom: 30vh;
 }
 
 .credit-section {
@@ -232,6 +240,17 @@ export default {
   object-position: bottom;
   z-index: 5;
   max-height: 30vh;
+}
+
+.disclaimer {
+  padding: 5px;
+  padding-bottom: 30vh;
+  font-family: 'Litebulb 8-bit', 'Noto Sans TC', cursive;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  text-align: justify;
+  text-align-last: center;
 }
 
 @media (orientation: portrait) and (min-width: 768px) {
